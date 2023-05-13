@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from 'react-router-dom'
 import './home.css'
+import Clock from '../components/Countdown'
 
 // loader y useLoaderData
 
@@ -20,6 +21,7 @@ const HomePage = () => {
               <div className='container__product--name'>
               {item.title}
               </div>
+              <Clock />
             </Link>
           </div>
         ))}

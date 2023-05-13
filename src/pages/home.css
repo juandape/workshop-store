@@ -5,21 +5,23 @@ img{
 
 h1{
 text-align: center;
-margin-top: 40px;
+margin-top: 80px;
 margin-bottom: 40px;
 color: rgb(4, 4, 68);
 }
 
 .container{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    width: 370px;
+    justify-content: center;
 }
 
 .container__product{
     margin: 0 auto;
     border: 1px solid black;
-    padding: 30px;
+    padding: 40px;
     text-align: center;
     border-radius: 10px;
 }
@@ -27,5 +29,6 @@ color: rgb(4, 4, 68);
 .container__product--name{
     color: black;
     text-align: center;
-    width: 200px;
+    width: 100px;
+    font-size: 15px;
 }

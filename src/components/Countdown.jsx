@@ -1,4 +1,5 @@
 import Countdown from "react-countdown";
+import PropTypes from "prop-types";
 import './countdown.css'
 
 const Clock = () => {
@@ -23,3 +24,8 @@ const random = () => Math.floor(Math.random() * 120000);
 };
 
 export default Clock;
+
+Clock.propTypes = {
+    minutes: PropTypes.string.isRequired,
+    seconds: PropTypes.string.isRequired
+  };

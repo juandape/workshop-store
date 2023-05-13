@@ -14,7 +14,6 @@ const HomePage = () => {
       <div className='container'>
         {products.map((item, index) => (
           <div className='container__product' key={index}>
-            <Link to={`/product-card/${item.id}`}>
               <div>
               <img src={item.image} alt="" />
               </div>
@@ -22,6 +21,8 @@ const HomePage = () => {
               {item.title}
               </div>
               <Clock />
+            <Link to={`/product-card/${item.id}`}>
+              <button>See Item</button>
             </Link>
           </div>
         ))}

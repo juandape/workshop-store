@@ -1,13 +1,22 @@
 import Countdown from "react-countdown";
 
 const Clock = () => {
+
+
+const random = () => Math.floor(Math.random()* 60000);
+
+
   return (
     <Countdown
-      date={Date.now() + 60000}
+      date={Date.now() + random(60000)}
       intervalDelay={0}
       precision={3}
       zeroPadTime={2}
-      renderer={(props) => <div>{props.minutes}:{props.seconds}</div>}
+      renderer={(props) => (
+        <div>
+          {props.minutes}: {props.seconds}
+        </div>
+      )}
     />
   );
 };

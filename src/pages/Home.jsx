@@ -1,10 +1,39 @@
+import { Link, useLoaderData } from 'react-router-dom'
+import './home.css'
+
+// loader y useLoaderData
+
 const HomePage = () => {
-    return (
-      <div>
-        <h1>Home Page</h1>
-        <p>Lorem ipsum dolor sit, amet consecte</p>
+  const { products = [] } = useLoaderData()
+
+  return(
+    <div>
+      <h1>WORKSHOP</h1>
+
+      <div className='container'>
+        {products.map((item, index) => (
+          <div className='container__product' key={index}>
+            <Link to={`/product-card/${item.id}`}>
+              <div>
+              <img src={item.image} alt="" />
+              </div>
+              <div className='container__product--name'>
+              {item.title}
+              </div>
+            </Link>
+          </div>
+        ))}
       </div>
-    );
-  }
-  
-  export default HomePage;
+    </div>
+  )
+}
+
+export default HomePage
+
+export const loaderProducts = async () => {
+  const response = await fetch('https://fakestoreapi.com/products')
+
+  const data = await response.json()
+
+  return { products: data }
+}

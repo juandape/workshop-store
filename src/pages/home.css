@@ -1,0 +1,23 @@
+img{
+ width: 100px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.container__product{
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.container__product--name{
+    color: black;
+    text-align: center;
+    width: 200px;
+}

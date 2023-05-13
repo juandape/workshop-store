@@ -1,8 +1,9 @@
 *{
-margin: 0 auto;
+margin: auto;
+top: 0
 }
 .cardContainer{
-    margin: 0 auto;
+    margin-top: 50px;
     border: 1px solid black;
     padding: 30px;
     text-align: center;

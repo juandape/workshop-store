@@ -1,42 +1,38 @@
-import { Link, useLoaderData } from 'react-router-dom'
-import './home.css'
-import Clock from '../components/Countdown'
+import { Link, useLoaderData } from "react-router-dom";
+import "./home.css";
+import Clock from "../components/Countdown";
 
-// loader y useLoaderData
 
 const HomePage = () => {
-  const { products = [] } = useLoaderData()
+  const { products = [] } = useLoaderData();
 
-  return(
+  return (
     <div>
       <h1>WORKSHOP</h1>
 
-      <div className='container'>
+      <div className="container">
         {products.map((item, index) => (
-          <div className='container__product' key={index}>
-              <div>
+          <div className="container__product" key={index}>
+            <div>
               <img src={item.image} alt="" />
-              </div>
-              <div className='container__product--name'>
-              {item.title}
-              </div>
+            </div>
+            <div className="container__product--name">{item.title}</div>
             <Link to={`/product-card/${item.id}`}>
-              
-              <button><Clock />See Item</button>
+              <Clock />
             </Link>
           </div>
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
 
 export const loaderProducts = async () => {
-  const response = await fetch('https://fakestoreapi.com/products')
+  const response = await fetch("https://fakestoreapi.com/products");
 
-  const data = await response.json()
+  const data = await response.json();
 
-  return { products: data }
-}
+  return { products: data };
+};

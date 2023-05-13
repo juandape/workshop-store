@@ -4,7 +4,7 @@ function AboutPage() {
   return (
     <div className="about-container">
       <h1>About me</h1>
-      <img src="" alt="author image" />
+      <img src="https://github.com/juandape/workshop-store/blob/main/src/assets/IMG_3661.png" alt="author image" />
       <h2>Juan David Peña</h2>
       <p>Fullstack Developer, profesional Bartender, Make It Real student</p>
       <h2>What I learn</h2>

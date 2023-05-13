@@ -1,0 +1,13 @@
+.header-container {
+  background: rgb(2, 0, 36);
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+.header-container__list {
+  list-style: none;
+  display: flex;
+  font-size: 30px;
+  margin-bottom: 20px;
+}

@@ -1,9 +1,10 @@
 import Countdown from "react-countdown";
+import './countdown.css'
 
 const Clock = () => {
 
 
-const random = () => Math.floor(Math.random()* 120000);
+const random = () => Math.floor(Math.random() * 120000);
 
 
   return (
@@ -12,8 +13,9 @@ const random = () => Math.floor(Math.random()* 120000);
       intervalDelay={0}
       precision={3}
       renderer={(props) => (
-        <div>
-          {props.minutes}: {props.seconds}
+        <div className="test">
+            <button><div>{props.minutes}: {props.seconds}</div>See Item</button>
+          
         </div>
       )}
     />

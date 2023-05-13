@@ -20,9 +20,9 @@ const HomePage = () => {
               <div className='container__product--name'>
               {item.title}
               </div>
-              <Clock />
             <Link to={`/product-card/${item.id}`}>
-              <button>See Item</button>
+              
+              <button><Clock />See Item</button>
             </Link>
           </div>
         ))}

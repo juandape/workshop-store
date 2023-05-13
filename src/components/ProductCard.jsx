@@ -1,11 +1,16 @@
 import { useLoaderData } from 'react-router-dom'
+import './productCard.css'
 
 const ProductCard = () => {
   const { product } = useLoaderData()
   return(
-    <div>
-      <h1>{product.id} - {product.title}</h1>
+    <div className='cardContainer'>
+      <h2>{product.title}</h2>
       <img src={product.image} alt="" />
+      <p>{product.description}</p>
+      <p><strong>Price:</strong>  ${product.price}</p>
+      <p><strong>Category:</strong>  {product.category}</p>
+      <p><strong>Rating:</strong> {product.rating.rate}</p>
     </div>
   )
 }

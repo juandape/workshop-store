@@ -1,0 +1,11 @@
+*{
+margin: 0 auto;
+}
+.cardContainer{
+    margin: 0 auto;
+    border: 1px solid black;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    width: 500px;
+}

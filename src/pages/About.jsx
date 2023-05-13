@@ -1,6 +1,8 @@
+import './about.css'
+
 function AboutPage() {
   return (
-    <div className="container">
+    <div className="about-container">
       <h1>About me</h1>
       <img src="" alt="author image" />
       <h2>Juan David Peña</h2>

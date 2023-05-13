@@ -7,7 +7,7 @@ function AboutPage() {
     <div className="about-container">
       <div className="about-container__info">
       <img
-        src="https://github.com/juandape/workshop-store/blob/ce3acac1d870764e93d8cb13027e8347edb40382/src/assets/IMG_3661.png"
+        src='..\src\assets\IMG_3661.png'
         alt="author image"
         className="about-container--img"
       />

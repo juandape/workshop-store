@@ -1,12 +1,9 @@
-import Countdown from "react-countdown";
+import Countdown, {zeroPad} from "react-countdown";
 import PropTypes from "prop-types";
-import './countdown.css'
+import "./countdown.css";
 
 const Clock = () => {
-
-
-const random = () => Math.floor(Math.random() * 120000);
-
+  const random = () => Math.floor(Math.random() * 120000);
 
   return (
     <Countdown
@@ -14,9 +11,13 @@ const random = () => Math.floor(Math.random() * 120000);
       intervalDelay={0}
       precision={3}
       renderer={(props) => (
-        <div className="test">
-            <button><div>{props.minutes}: {props.seconds}</div>See Item</button>
-          
+        <div>
+          <button>
+            <div>
+              {zeroPad(props.minutes)}: {zeroPad(props.seconds)}
+            </div>
+            See Item
+          </button>
         </div>
       )}
     />
@@ -26,6 +27,17 @@ const random = () => Math.floor(Math.random() * 120000);
 export default Clock;
 
 Clock.propTypes = {
-    minutes: PropTypes.string.isRequired,
-    seconds: PropTypes.string.isRequired
-  };
+  minutes: PropTypes.string.isRequired,
+  seconds: PropTypes.string.isRequired,
+};
+
+// renderer={(props)=>(
+//     <div>
+//       <button>
+//         <div>
+//           {props.minutes}: {props.seconds}
+//         </div>
+//         See Item
+//       </button>
+//     </div>
+//   )}

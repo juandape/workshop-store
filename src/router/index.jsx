@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router-dom";
-
 import Root from "../layout/root";
 import AboutPage from "../pages/About";
 import Home, { loaderProducts } from "../pages/Home";

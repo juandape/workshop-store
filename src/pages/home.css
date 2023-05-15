@@ -33,7 +33,7 @@ h1 {
   font-size: 15px;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 375px) {
   .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

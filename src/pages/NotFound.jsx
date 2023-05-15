@@ -6,14 +6,14 @@ const NotFound = () => {
 
   return (
     <div className="container__notfound">
-      <h1 className="container__notfound--title">404</h1>
       <img
-        src="..\src\assets\dog.jpg"
+        src="\images\dog.jpg"
         alt="dog"
         className="container__notfound--img"
       />
+      <h1 className="container__notfound--title">404</h1>
       <div className="container__notfound--text">
-        <p>Ups! sorry, something went wrong</p>
+        <p>Ups! sorry, something went wrong...</p>
         <p> {error.statusText || error.message} </p>
       </div>
     </div>

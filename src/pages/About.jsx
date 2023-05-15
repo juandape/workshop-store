@@ -7,7 +7,7 @@ function AboutPage() {
       <div className="about-container">
         <div className="about-container__info">
           <img
-            src="D:\Make it real\workshop-store\src\assets\IMG_3661.png"
+            src="..\src\assets\IMG_3661.png"
             alt="author image"
             className="about-container--img"
           />

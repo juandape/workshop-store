@@ -4,8 +4,6 @@ import "./countdown.css";
 
 const Clock = () => {
   const random = () => Math.floor(Math.random() * 120000);
-  
-
 
   return (
     <Countdown
@@ -18,7 +16,7 @@ const Clock = () => {
         } else {
           return (
             <div>
-              <button >
+              <button>
                 <div>
                   {zeroPad(props.minutes)}: {zeroPad(props.seconds)}
                 </div>
@@ -31,7 +29,6 @@ const Clock = () => {
     />
   );
 };
-
 
 export default Clock;
 

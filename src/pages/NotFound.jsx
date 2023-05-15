@@ -1,5 +1,5 @@
 import { useRouteError } from "react-router-dom";
-import './notfound.css'
+import "./notfound.css";
 
 const NotFound = () => {
   const error = useRouteError();
@@ -7,10 +7,14 @@ const NotFound = () => {
   return (
     <div className="container__notfound">
       <h1 className="container__notfound--title">404</h1>
-      <img src="..\src\assets\dog.jpg" alt="dog" className="container__notfound--img"/>
+      <img
+        src="..\src\assets\dog.jpg"
+        alt="dog"
+        className="container__notfound--img"
+      />
       <div className="container__notfound--text">
-      <p>Ups! sorry, something went wrong</p>
-      <p> {error.statusText || error.message} </p>
+        <p>Ups! sorry, something went wrong</p>
+        <p> {error.statusText || error.message} </p>
       </div>
     </div>
   );

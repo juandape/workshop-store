@@ -1,18 +1,18 @@
-*{
-margin: auto;
-top: 0
+* {
+  margin: auto;
+  top: 0;
 }
-.cardContainer{
-    margin-top: 50px;
-    border: 1px solid black;
-    padding: 30px;
-    text-align: center;
-    border-radius: 10px;
-    width: 300px;
+.cardContainer {
+  margin-top: 50px;
+  border: 1px solid black;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  width: 300px;
 }
 
-@media (min-width: 376px){
-    .cardContainer{
-        width: 500px;
-    }
+@media (min-width: 376px) {
+  .cardContainer {
+    width: 500px;
+  }
 }

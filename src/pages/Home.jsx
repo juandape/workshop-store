@@ -2,7 +2,6 @@ import { Link, useLoaderData } from "react-router-dom";
 import "./home.css";
 import Clock from "../components/Countdown";
 
-
 const HomePage = () => {
   const { products = [] } = useLoaderData();
 
@@ -29,6 +28,7 @@ const HomePage = () => {
 
 export default HomePage;
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const loaderProducts = async () => {
   const response = await fetch("https://fakestoreapi.com/products");
 

@@ -1,0 +1,35 @@
+.container__notfound {
+  display: flex;
+  flex-direction: column;
+}
+
+.container__notfound--img {
+  width: 200px;
+  height: 200px;
+}
+
+.container__notfound--title {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 70px;
+}
+
+.container__notfound--text {
+  font-size: 22px;
+  margin: 0 auto;
+  color: red;
+  margin-top: 20px;
+}
+
+@media (min-width: 376px) {
+  .container__notfound--title {
+    font-size: 100px;
+  }
+  .container__notfound--img {
+    width: 600px;
+    height: 600px;
+  }
+
+  .container__notfound--text {
+    font-size: 40px;
+  }
+}

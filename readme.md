@@ -5,7 +5,7 @@
 create a React Project
 
 ## Vercel page
-http://
+http://workshop-store-ten.vercel.app/
 
 ## Screenshot
 ![print screen](./src/assets/print-screen.png)

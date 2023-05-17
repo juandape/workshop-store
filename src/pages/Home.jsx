@@ -1,8 +1,9 @@
-import { Link, useLoaderData } from "react-router-dom";
-import "./home.css";
-import Clock from "../components/Countdown";
+import { Link, useLoaderData } from 'react-router-dom';
+import React from 'react';
+import './home.css';
+import Clock from '../components/countdown/Countdown';
 
-const HomePage = () => {
+function HomePage() {
   const { products = [] } = useLoaderData();
 
   return (
@@ -10,27 +11,30 @@ const HomePage = () => {
       <h1>WORKSHOP</h1>
 
       <div className="container">
-        {products.map((item, index) => (
-          <div className="container__product" key={index}>
+        {products.map((item) => (
+          <div className="container__product" key={item.id}>
             <div>
               <img src={item.image} alt="" />
             </div>
             <div className="container__product--name">{item.title}</div>
-            <Link to={`/product-card/${item.id}`}>
-              <Clock />
-            </Link>
+            {Clock !== null ? (
+              <Link to={`/product-card/${item.id}`}>
+                <Clock />
+              </Link>
+            ) : (
+              <p>not available</p>
+            )}
           </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
 export default HomePage;
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const loaderProducts = async () => {
-  const response = await fetch("https://fakestoreapi.com/products");
+  const response = await fetch('https://fakestoreapi.com/products');
 
   const data = await response.json();
 

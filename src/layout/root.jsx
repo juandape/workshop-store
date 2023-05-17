@@ -1,15 +1,15 @@
-import { Outlet, useNavigation } from "react-router-dom";
+import { Outlet, useNavigation } from 'react-router-dom';
+import React from 'react';
+import Header from '../components/header/Header';
 
-import Header from "../components/Header";
-
-const Root = () => {
+function Root() {
   const navigation = useNavigation();
   return (
     <>
       <Header />
-      <main>{navigation.state === "loading" ? "Loading..." : <Outlet />}</main>
+      <main>{navigation.state === 'loading' ? 'Loading...' : <Outlet />}</main>
     </>
   );
-};
+}
 
 export default Root;

@@ -1,7 +1,7 @@
 import { Link, useLoaderData } from 'react-router-dom';
 import React from 'react';
 import './home.css';
-import Clock from '../components/countdown/Countdown';
+import Clock from '../../components/countdown/Countdown';
 
 function HomePage() {
   const { products = [] } = useLoaderData();
